@@ -18,24 +18,46 @@ function calculateTaskTime(){
 function printResume(){
     prev=$curr
     if [ "$task" == "Inicio" ]; then
+        if [ "$pickedDate" == "" ]; then
+            printSubTotals
+        fi
         IFS=" " read -r day rest <<< $datetime
         echo -e "\n==> $(date -d "$day" +"%a") $day <=="
     else
-        echo "($mins mins) [$datetime] - $task"
+        let "secs=$mins*60"
+        hr=$(date -d@$secs -u +%H:%M)
+        echo "($mins mins - $hr hs) [$datetime] - $task"
     fi
 }
 
 function calculateTotalmins(){
     if [ "$task" == "Inicio" ]; then
         let "totalmins=0"
+        let "nothing=0"
     else
         let "totalmins=$totalmins+$mins"
     fi
-    hours=$(bc <<< "scale=2; $totalmins/60")
+    let "secs=$totalmins*60"
+    hours=$(date -d@$secs -u +%H:%M)
+}
+
+
+function calculateSubTotalmins(){
+    if [ "$task" == "Inicio" ]; then
+        let "subtotalmins=0"
+    else
+        let "subtotalmins=$subtotalmins+$mins"
+    fi
+    let "subsecs=$subtotalmins*60"
+    hourssubtotal=$(date -d@$subsecs -u +%H:%M)
 }
 
 function printTotals(){
     echo -e "\n[Total: ($totalmins mins) $hours h]"
+}
+
+function printSubTotals(){
+    echo -e "\n[SubTotal: ($subtotalmins mins) $hourssubtotal h]"
 }
 
 init $@
@@ -44,5 +66,6 @@ do
     calculateTaskTime
     calculateTotalmins
     printResume
+    calculateSubTotalmins
 done < ./tmp.log;rm ./tmp.log
 printTotals
