@@ -1,989 +1,432 @@
-
-<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><style>@font-face {
-  font-family: octicons-link;
-  src: url(data:font/woff;charset=utf-8;base64,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) format('woff');
-}
-
-body {
-    width: 980px;
-    margin-right: auto;
-    margin-left: auto;
-    color:#333;
-    background:#fff;
-}
-
-body .markdown-body {
-    padding: 45px;
-    word-wrap: break-word;
-}
-
-.markdown-body .octicon-link:before {
-  font: normal normal normal 16px/1 octicons-link;
-  display: inline-block;
-  text-decoration: none;
-  text-rendering: auto;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  content: '\f05c';
-  vertical-align: middle;
-}
-
-.markdown-body .anchor {
-  float: left;
-  line-height: 1;
-  margin-left: -20px;
-  padding-right: 4px;
-}
-
-.markdown-body .anchor:focus {
-  outline: none;
-}
-
-.markdown-body h1 .octicon-link,
-.markdown-body h2 .octicon-link,
-.markdown-body h3 .octicon-link,
-.markdown-body h4 .octicon-link,
-.markdown-body h5 .octicon-link,
-.markdown-body h6 .octicon-link {
-  color: #1b1f23;
-  vertical-align: middle;
-  visibility: hidden;
-}
-
-.markdown-body h1:hover .anchor,
-.markdown-body h2:hover .anchor,
-.markdown-body h3:hover .anchor,
-.markdown-body h4:hover .anchor,
-.markdown-body h5:hover .anchor,
-.markdown-body h6:hover .anchor {
-  text-decoration: none;
-}
-
-.markdown-body h1:hover .anchor .octicon-link,
-.markdown-body h2:hover .anchor .octicon-link,
-.markdown-body h3:hover .anchor .octicon-link,
-.markdown-body h4:hover .anchor .octicon-link,
-.markdown-body h5:hover .anchor .octicon-link,
-.markdown-body h6:hover .anchor .octicon-link {
-  visibility: visible;
-}
-
-.markdown-body {
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
-  color: #24292e;
-  line-height: 1.5;
-  font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol;
-  font-size: 16px;
-  line-height: 1.5;
-  word-wrap: break-word;
-}
-
-.markdown-body .pl-c {
-  color: #6a737d;
-}
-
-.markdown-body .pl-c1,
-.markdown-body .pl-s .pl-v {
-  color: #005cc5;
-}
-
-.markdown-body .pl-e,
-.markdown-body .pl-en {
-  color: #6f42c1;
-}
-
-.markdown-body .pl-s .pl-s1,
-.markdown-body .pl-smi {
-  color: #24292e;
-}
-
-.markdown-body .pl-ent {
-  color: #22863a;
-}
-
-.markdown-body .pl-k {
-  color: #d73a49;
-}
-
-.markdown-body .pl-pds,
-.markdown-body .pl-s,
-.markdown-body .pl-s .pl-pse .pl-s1,
-.markdown-body .pl-sr,
-.markdown-body .pl-sr .pl-cce,
-.markdown-body .pl-sr .pl-sra,
-.markdown-body .pl-sr .pl-sre {
-  color: #032f62;
-}
-
-.markdown-body .pl-smw,
-.markdown-body .pl-v {
-  color: #e36209;
-}
-
-.markdown-body .pl-bu {
-  color: #b31d28;
-}
-
-.markdown-body .pl-ii {
-  background-color: #b31d28;
-  color: #fafbfc;
-}
-
-.markdown-body .pl-c2 {
-  background-color: #d73a49;
-  color: #fafbfc;
-}
-
-.markdown-body .pl-c2:before {
-  content: "^M";
-}
-
-.markdown-body .pl-sr .pl-cce {
-  color: #22863a;
-  font-weight: 700;
-}
-
-.markdown-body .pl-ml {
-  color: #735c0f;
-}
-
-.markdown-body .pl-mh,
-.markdown-body .pl-mh .pl-en,
-.markdown-body .pl-ms {
-  color: #005cc5;
-  font-weight: 700;
-}
-
-.markdown-body .pl-mi {
-  color: #24292e;
-  font-style: italic;
-}
-
-.markdown-body .pl-mb {
-  color: #24292e;
-  font-weight: 700;
-}
-
-.markdown-body .pl-md {
-  background-color: #ffeef0;
-  color: #b31d28;
-}
-
-.markdown-body .pl-mi1 {
-  background-color: #f0fff4;
-  color: #22863a;
-}
-
-.markdown-body .pl-mc {
-  background-color: #ffebda;
-  color: #e36209;
-}
-
-.markdown-body .pl-mi2 {
-  background-color: #005cc5;
-  color: #f6f8fa;
-}
-
-.markdown-body .pl-mdr {
-  color: #6f42c1;
-  font-weight: 700;
-}
-
-.markdown-body .pl-ba {
-  color: #586069;
-}
-
-.markdown-body .pl-sg {
-  color: #959da5;
-}
-
-.markdown-body .pl-corl {
-  color: #032f62;
-  text-decoration: underline;
-}
-
-.markdown-body details {
-  display: block;
-}
-
-.markdown-body summary {
-  display: list-item;
-}
-
-.markdown-body a {
-  background-color: transparent;
-}
-
-.markdown-body a:active,
-.markdown-body a:hover {
-  outline-width: 0;
-}
-
-.markdown-body strong {
-  font-weight: inherit;
-  font-weight: bolder;
-}
-
-.markdown-body h1 {
-  font-size: 2em;
-  margin: .67em 0;
-}
-
-.markdown-body img {
-  border-style: none;
-}
-
-.markdown-body code,
-.markdown-body kbd,
-.markdown-body pre {
-  font-family: monospace,monospace;
-  font-size: 1em;
-}
-
-.markdown-body hr {
-  box-sizing: content-box;
-  height: 0;
-  overflow: visible;
-}
-
-.markdown-body input {
-  font: inherit;
-  margin: 0;
-}
-
-.markdown-body input {
-  overflow: visible;
-}
-
-.markdown-body [type=checkbox] {
-  box-sizing: border-box;
-  padding: 0;
-}
-
-.markdown-body * {
-  box-sizing: border-box;
-}
-
-.markdown-body input {
-  font-family: inherit;
-  font-size: inherit;
-  line-height: inherit;
-}
-
-.markdown-body a {
-  color: #0366d6;
-  text-decoration: none;
-}
-
-.markdown-body a:hover {
-  text-decoration: underline;
-}
-
-.markdown-body strong {
-  font-weight: 600;
-}
-
-.markdown-body hr {
-  background: transparent;
-  border: 0;
-  border-bottom: 1px solid #dfe2e5;
-  height: 0;
-  margin: 15px 0;
-  overflow: hidden;
-}
-
-.markdown-body hr:before {
-  content: "";
-  display: table;
-}
-
-.markdown-body hr:after {
-  clear: both;
-  content: "";
-  display: table;
-}
-
-.markdown-body table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
-.markdown-body td,
-.markdown-body th {
-  padding: 0;
-}
-
-.markdown-body details summary {
-  cursor: pointer;
-}
-
-.markdown-body h1,
-.markdown-body h2,
-.markdown-body h3,
-.markdown-body h4,
-.markdown-body h5,
-.markdown-body h6 {
-  margin-bottom: 0;
-  margin-top: 0;
-}
-
-.markdown-body h1 {
-  font-size: 32px;
-}
-
-.markdown-body h1,
-.markdown-body h2 {
-  font-weight: 600;
-}
-
-.markdown-body h2 {
-  font-size: 24px;
-}
-
-.markdown-body h3 {
-  font-size: 20px;
-}
-
-.markdown-body h3,
-.markdown-body h4 {
-  font-weight: 600;
-}
-
-.markdown-body h4 {
-  font-size: 16px;
-}
-
-.markdown-body h5 {
-  font-size: 14px;
-}
-
-.markdown-body h5,
-.markdown-body h6 {
-  font-weight: 600;
-}
-
-.markdown-body h6 {
-  font-size: 12px;
-}
-
-.markdown-body p {
-  margin-bottom: 10px;
-  margin-top: 0;
-}
-
-.markdown-body blockquote {
-  margin: 0;
-}
-
-.markdown-body ol,
-.markdown-body ul {
-  margin-bottom: 0;
-  margin-top: 0;
-  padding-left: 0;
-}
-
-.markdown-body ol ol,
-.markdown-body ul ol {
-  list-style-type: lower-roman;
-}
-
-.markdown-body ol ol ol,
-.markdown-body ol ul ol,
-.markdown-body ul ol ol,
-.markdown-body ul ul ol {
-  list-style-type: lower-alpha;
-}
-
-.markdown-body dd {
-  margin-left: 0;
-}
-
-.markdown-body code,
-.markdown-body pre {
-  font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace;
-  font-size: 12px;
-}
-
-.markdown-body pre {
-  margin-bottom: 0;
-  margin-top: 0;
-}
-
-.markdown-body input::-webkit-inner-spin-button,
-.markdown-body input::-webkit-outer-spin-button {
-  -webkit-appearance: none;
-  appearance: none;
-  margin: 0;
-}
-
-.markdown-body .border {
-  border: 1px solid #e1e4e8!important;
-}
-
-.markdown-body .border-0 {
-  border: 0!important;
-}
-
-.markdown-body .border-bottom {
-  border-bottom: 1px solid #e1e4e8!important;
-}
-
-.markdown-body .rounded-1 {
-  border-radius: 3px!important;
-}
-
-.markdown-body .bg-white {
-  background-color: #fff!important;
-}
-
-.markdown-body .bg-gray-light {
-  background-color: #fafbfc!important;
-}
-
-.markdown-body .text-gray-light {
-  color: #6a737d!important;
-}
-
-.markdown-body .mb-0 {
-  margin-bottom: 0!important;
-}
-
-.markdown-body .my-2 {
-  margin-bottom: 8px!important;
-  margin-top: 8px!important;
-}
-
-.markdown-body .pl-0 {
-  padding-left: 0!important;
-}
-
-.markdown-body .py-0 {
-  padding-bottom: 0!important;
-  padding-top: 0!important;
-}
-
-.markdown-body .pl-1 {
-  padding-left: 4px!important;
-}
-
-.markdown-body .pl-2 {
-  padding-left: 8px!important;
-}
-
-.markdown-body .py-2 {
-  padding-bottom: 8px!important;
-  padding-top: 8px!important;
-}
-
-.markdown-body .pl-3,
-.markdown-body .px-3 {
-  padding-left: 16px!important;
-}
-
-.markdown-body .px-3 {
-  padding-right: 16px!important;
-}
-
-.markdown-body .pl-4 {
-  padding-left: 24px!important;
-}
-
-.markdown-body .pl-5 {
-  padding-left: 32px!important;
-}
-
-.markdown-body .pl-6 {
-  padding-left: 40px!important;
-}
-
-.markdown-body .f6 {
-  font-size: 12px!important;
-}
-
-.markdown-body .lh-condensed {
-  line-height: 1.25!important;
-}
-
-.markdown-body .text-bold {
-  font-weight: 600!important;
-}
-
-.markdown-body:before {
-  content: "";
-  display: table;
-}
-
-.markdown-body:after {
-  clear: both;
-  content: "";
-  display: table;
-}
-
-.markdown-body>:first-child {
-  margin-top: 0!important;
-}
-
-.markdown-body>:last-child {
-  margin-bottom: 0!important;
-}
-
-.markdown-body a:not([href]) {
-  color: inherit;
-  text-decoration: none;
-}
-
-.markdown-body blockquote,
-.markdown-body dl,
-.markdown-body ol,
-.markdown-body p,
-.markdown-body pre,
-.markdown-body table,
-.markdown-body ul {
-  margin-bottom: 16px;
-  margin-top: 0;
-}
-
-.markdown-body hr {
-  background-color: #e1e4e8;
-  border: 0;
-  height: .25em;
-  margin: 24px 0;
-  padding: 0;
-}
-
-.markdown-body blockquote {
-  border-left: .25em solid #dfe2e5;
-  color: #6a737d;
-  padding: 0 1em;
-}
-
-.markdown-body blockquote>:first-child {
-  margin-top: 0;
-}
-
-.markdown-body blockquote>:last-child {
-  margin-bottom: 0;
-}
-
-.markdown-body kbd {
-  background-color: #fafbfc;
-  border: 1px solid #c6cbd1;
-  border-bottom-color: #959da5;
-  border-radius: 3px;
-  box-shadow: inset 0 -1px 0 #959da5;
-  color: #444d56;
-  display: inline-block;
-  font-size: 11px;
-  line-height: 10px;
-  padding: 3px 5px;
-  vertical-align: middle;
-}
-
-.markdown-body h1,
-.markdown-body h2,
-.markdown-body h3,
-.markdown-body h4,
-.markdown-body h5,
-.markdown-body h6 {
-  font-weight: 600;
-  line-height: 1.25;
-  margin-bottom: 16px;
-  margin-top: 24px;
-}
-
-.markdown-body h1 {
-  font-size: 2em;
-}
-
-.markdown-body h1,
-.markdown-body h2 {
-  border-bottom: 1px solid #eaecef;
-  padding-bottom: .3em;
-}
-
-.markdown-body h2 {
-  font-size: 1.5em;
-}
-
-.markdown-body h3 {
-  font-size: 1.25em;
-}
-
-.markdown-body h4 {
-  font-size: 1em;
-}
-
-.markdown-body h5 {
-  font-size: .875em;
-}
-
-.markdown-body h6 {
-  color: #6a737d;
-  font-size: .85em;
-}
-
-.markdown-body ol,
-.markdown-body ul {
-  padding-left: 2em;
-}
-
-.markdown-body ol ol,
-.markdown-body ol ul,
-.markdown-body ul ol,
-.markdown-body ul ul {
-  margin-bottom: 0;
-  margin-top: 0;
-}
-
-.markdown-body li {
-  word-wrap: break-all;
-}
-
-.markdown-body li>p {
-  margin-top: 16px;
-}
-
-.markdown-body li+li {
-  margin-top: .25em;
-}
-
-.markdown-body dl {
-  padding: 0;
-}
-
-.markdown-body dl dt {
-  font-size: 1em;
-  font-style: italic;
-  font-weight: 600;
-  margin-top: 16px;
-  padding: 0;
-}
-
-.markdown-body dl dd {
-  margin-bottom: 16px;
-  padding: 0 16px;
-}
-
-.markdown-body table {
-  display: block;
-  overflow: auto;
-  width: 100%;
-}
-
-.markdown-body table th {
-  font-weight: 600;
-}
-
-.markdown-body table td,
-.markdown-body table th {
-  border: 1px solid #dfe2e5;
-  padding: 6px 13px;
-}
-
-.markdown-body table tr {
-  background-color: #fff;
-  border-top: 1px solid #c6cbd1;
-}
-
-.markdown-body table tr:nth-child(2n) {
-  background-color: #f6f8fa;
-}
-
-.markdown-body img {
-  background-color: #fff;
-  box-sizing: content-box;
-  max-width: 100%;
-}
-
-.markdown-body img[align=right] {
-  padding-left: 20px;
-}
-
-.markdown-body img[align=left] {
-  padding-right: 20px;
-}
-
-.markdown-body code {
-  background-color: rgba(27,31,35,.05);
-  border-radius: 3px;
-  font-size: 85%;
-  margin: 0;
-  padding: .2em .4em;
-}
-
-.markdown-body pre {
-  word-wrap: normal;
-}
-
-.markdown-body pre>code {
-  background: transparent;
-  border: 0;
-  font-size: 100%;
-  margin: 0;
-  padding: 0;
-  white-space: pre;
-  word-break: normal;
-}
-
-.markdown-body .highlight {
-  margin-bottom: 16px;
-}
-
-.markdown-body .highlight pre {
-  margin-bottom: 0;
-  word-break: normal;
-}
-
-.markdown-body .highlight pre,
-.markdown-body pre {
-  background-color: #f6f8fa;
-  border-radius: 3px;
-  font-size: 85%;
-  line-height: 1.45;
-  overflow: auto;
-  padding: 16px;
-}
-
-.markdown-body pre code {
-  background-color: transparent;
-  border: 0;
-  display: inline;
-  line-height: inherit;
-  margin: 0;
-  max-width: auto;
-  overflow: visible;
-  padding: 0;
-  word-wrap: normal;
-}
-
-.markdown-body .commit-tease-sha {
-  color: #444d56;
-  display: inline-block;
-  font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace;
-  font-size: 90%;
-}
-
-.markdown-body .blob-wrapper {
-  border-bottom-left-radius: 3px;
-  border-bottom-right-radius: 3px;
-  overflow-x: auto;
-  overflow-y: hidden;
-}
-
-.markdown-body .blob-wrapper-embedded {
-  max-height: 240px;
-  overflow-y: auto;
-}
-
-.markdown-body .blob-num {
-  -moz-user-select: none;
-  -ms-user-select: none;
-  -webkit-user-select: none;
-  color: rgba(27,31,35,.3);
-  cursor: pointer;
-  font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace;
-  font-size: 12px;
-  line-height: 20px;
-  min-width: 50px;
-  padding-left: 10px;
-  padding-right: 10px;
-  text-align: right;
-  user-select: none;
-  vertical-align: top;
-  white-space: nowrap;
-  width: 1%;
-}
-
-.markdown-body .blob-num:hover {
-  color: rgba(27,31,35,.6);
-}
-
-.markdown-body .blob-num:before {
-  content: attr(data-line-number);
-}
-
-.markdown-body .blob-code {
-  line-height: 20px;
-  padding-left: 10px;
-  padding-right: 10px;
-  position: relative;
-  vertical-align: top;
-}
-
-.markdown-body .blob-code-inner {
-  color: #24292e;
-  font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace;
-  font-size: 12px;
-  overflow: visible;
-  white-space: pre;
-  word-wrap: normal;
-}
-
-.markdown-body .pl-token.active,
-.markdown-body .pl-token:hover {
-  background: #ffea7f;
-  cursor: pointer;
-}
-
-.markdown-body kbd {
-  background-color: #fafbfc;
-  border: 1px solid #d1d5da;
-  border-bottom-color: #c6cbd1;
-  border-radius: 3px;
-  box-shadow: inset 0 -1px 0 #c6cbd1;
-  color: #444d56;
-  display: inline-block;
-  font: 11px SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace;
-  line-height: 10px;
-  padding: 3px 5px;
-  vertical-align: middle;
-}
-
-.markdown-body :checked+.radio-label {
-  border-color: #0366d6;
-  position: relative;
-  z-index: 1;
-}
-
-.markdown-body .tab-size[data-tab-size="1"] {
-  -moz-tab-size: 1;
-  tab-size: 1;
-}
-
-.markdown-body .tab-size[data-tab-size="2"] {
-  -moz-tab-size: 2;
-  tab-size: 2;
-}
-
-.markdown-body .tab-size[data-tab-size="3"] {
-  -moz-tab-size: 3;
-  tab-size: 3;
-}
-
-.markdown-body .tab-size[data-tab-size="4"] {
-  -moz-tab-size: 4;
-  tab-size: 4;
-}
-
-.markdown-body .tab-size[data-tab-size="5"] {
-  -moz-tab-size: 5;
-  tab-size: 5;
-}
-
-.markdown-body .tab-size[data-tab-size="6"] {
-  -moz-tab-size: 6;
-  tab-size: 6;
-}
-
-.markdown-body .tab-size[data-tab-size="7"] {
-  -moz-tab-size: 7;
-  tab-size: 7;
-}
-
-.markdown-body .tab-size[data-tab-size="8"] {
-  -moz-tab-size: 8;
-  tab-size: 8;
-}
-
-.markdown-body .tab-size[data-tab-size="9"] {
-  -moz-tab-size: 9;
-  tab-size: 9;
-}
-
-.markdown-body .tab-size[data-tab-size="10"] {
-  -moz-tab-size: 10;
-  tab-size: 10;
-}
-
-.markdown-body .tab-size[data-tab-size="11"] {
-  -moz-tab-size: 11;
-  tab-size: 11;
-}
-
-.markdown-body .tab-size[data-tab-size="12"] {
-  -moz-tab-size: 12;
-  tab-size: 12;
-}
-
-.markdown-body .task-list-item {
-  list-style-type: none;
-}
-
-.markdown-body .task-list-item+.task-list-item {
-  margin-top: 3px;
-}
-
-.markdown-body .task-list-item input {
-  margin: 0 .2em .25em -1.6em;
-  vertical-align: middle;
-}
-
-.markdown-body hr {
-  border-bottom-color: #eee;
-}
-
-.markdown-body .pl-0 {
-  padding-left: 0!important;
-}
-
-.markdown-body .pl-1 {
-  padding-left: 4px!important;
-}
-
-.markdown-body .pl-2 {
-  padding-left: 8px!important;
-}
-
-.markdown-body .pl-3 {
-  padding-left: 16px!important;
-}
-
-.markdown-body .pl-4 {
-  padding-left: 24px!important;
-}
-
-.markdown-body .pl-5 {
-  padding-left: 32px!important;
-}
-
-.markdown-body .pl-6 {
-  padding-left: 40px!important;
-}
-
-.markdown-body .pl-7 {
-  padding-left: 48px!important;
-}
-
-.markdown-body .pl-8 {
-  padding-left: 64px!important;
-}
-
-.markdown-body .pl-9 {
-  padding-left: 80px!important;
-}
-
-.markdown-body .pl-10 {
-  padding-left: 96px!important;
-}
-
-.markdown-body .pl-11 {
-  padding-left: 112px!important;
-}
-
-.markdown-body .pl-12 {
-  padding-left: 128px!important;
-}
-</style><title>index</title></head><body><article class="markdown-body"><h1><a id="user-content-roberto-bargiela-cv" class="anchor" aria-hidden="true" tabindex="-1" href="#roberto-bargiela-cv"><span aria-hidden="true" class="octicon octicon-link"></span></a>Roberto Bargiela CV</h1>
-<p>Soy Licenciado en Sistemas egresado de la <a href="/home/rbargiela/Work/LiquidBrain/internals/repos/rbargiela-cv/unne.edu.ar">UNNE</a>.</p>
-</article></body></html><script async>
-document.write(
-  '<script src="http://' +
-  (location.host || 'localhost').split(':')[0] +
-  ':35729/livereload.js?snipver=1" async></' +
-  'script>')
-</script>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roberto Bargiela - CV Tech Leader</title>
+    <!-- Carga de Tailwind CSS para el diseño moderno y responsivo -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Carga de Lucide icons para los íconos limpios y modernos -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        /* Configuración de Tailwind para usar la fuente Inter */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+        :root {
+            --color-primary: #10B981; /* Verde Tecnológico */
+            --color-secondary: #1F2937; /* Gris Oscuro */
+            --color-background: #F9FAFB; /* Fondo Claro */
+            --color-text: #374151; /* Texto Principal */
+            --color-header: #1E3A8A; /* Azul Índigo (Menos oscuro que el anterior) */
+            --color-link-hover: #ffffff; /* Blanco para mejor contraste en el header */
+            --color-section-bg: #E0F2F7; /* Fondo de sección (Azul muy claro/Cian) */
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--color-background);
+        }
+        /* Clase para la animación de carga (Fade In) */
+        .fade-in-up {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .fade-in-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* Estilo para los botones/enlaces interactivos (Hover & Click) */
+        /* Eliminamos el box-shadow de aquí para que no afecte a los logos */
+        .interactive-link {
+            transition: all 0.2s ease-in-out;
+        }
+        /* Sólo aplicamos el efecto de elevación al texto */
+        .interactive-link:hover {
+            color: var(--color-primary);
+            transform: translateY(-2px);
+        }
+        .interactive-link:active {
+            transform: scale(0.98);
+        }
+
+        /* Nuevo estilo para la animación circular del logo */
+        .logo-link img {
+            transition: all 0.3s ease-in-out;
+        }
+        .logo-link:hover img {
+            transform: scale(1.1); /* Ligeramente más grande */
+            box-shadow: 0 0 15px rgba(16, 185, 129, 0.5); /* Sombra circular */
+        }
+        /* Estilo específico para los enlaces del HEADER para mejor contraste */
+        .header-link-icon:hover {
+            color: var(--color-primary); /* El icono se vuelve verde */
+        }
+        .header-link-text:hover {
+            color: var(--color-link-hover); /* El texto se mantiene blanco o cambia a blanco */
+        }
+
+
+        /* Estilo para las tarjetas de experiencia (Hover) */
+        .experience-card {
+            transition: all 0.3s ease-in-out;
+            border-left: 4px solid transparent;
+        }
+        .experience-card:hover {
+            border-left-color: var(--color-primary);
+            box-shadow: 0 10px 25px rgba(30, 58, 138, 0.1); /* Sombra con tono azul */
+            transform: translateY(-3px);
+        }
+        
+        /* Estilos específicos para la sección de Habilidades/Skills */
+        .skill-badge {
+            transition: all 0.2s;
+        }
+        .skill-badge:hover {
+            background-color: #1E3A8A; /* Cambia a azul índigo */
+            color: var(--color-primary); /* Texto a verde */
+            transform: scale(1.05);
+        }
+
+        .bg-color-header{
+            background-color: var(--color-header);
+        }
+        .bg-color-primary{
+            background-color: var(--color-primary);
+        }
+    </style>
+</head>
+<body class="text-gray-700">
+
+    <!-- Header / Banner Principal - ALTO CONTRASTE APLICADO -->
+    <header class="bg-color-header text-white shadow-2xl py-16 px-4 sm:px-6 lg:px-8 border-b-4 border-color-primary">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between">
+            <div class="text-center md:text-left fade-in-up" data-delay="0.1">
+                <h1 class="text-5xl font-extrabold tracking-tight sm:text-6xl">
+                    Roberto Alejandro <span class="text-color-primary">Bargiela</span>
+                </h1>
+                <p class="mt-3 text-xl font-medium text-gray-200">
+                    Lic. en Sistemas | Tech Leader & PM/Scrum Master
+                </p>
+                <div class="mt-6 flex justify-center md:justify-start space-x-4">
+                    <!-- Enlaces de Contacto con mejor contraste y animación de ícono -->
+                    <a href="http://ar.linkedin.com/in/robertobargiela/" target="_blank" class="interactive-link flex items-center text-gray-300 hover:text-color-primary">
+                        <i data-lucide="linkedin" class="w-5 h-5 mr-2 header-link-icon"></i>
+                        <span class="header-link-text">LinkedIn</span>
+                    </a>
+                    <a href="mailto:roberto.bargiela@gmail.com" class="interactive-link flex items-center text-gray-300 hover:text-color-primary">
+                        <i data-lucide="mail" class="w-5 h-5 mr-2 header-link-icon"></i>
+                        <span class="header-link-text">Email</span>
+                    </a>
+                    <a href="tel:+5493794734071" class="interactive-link flex items-center text-gray-300 hover:text-color-primary">
+                        <i data-lucide="phone" class="w-5 h-5 mr-2 header-link-icon"></i>
+                        <span class="header-link-text">Teléfono</span>
+                    </a>
+                </div>
+            </div>
+            <!-- Placeholder para la imagen de perfil: AHORA ES REDONDA -->
+            <div class="mt-8 md:mt-0 fade-in-up" data-delay="0.3">
+                 <!-- Contenedor ajustado para la imagen de perfil -->
+                 <div class="w-32 h-32 bg-white rounded-full flex items-center justify-center border-4 border-color-primary shadow-lg overflow-hidden">
+                    <img src="me.jpeg" class="w-full h-full object-cover rounded-full">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+
+        <!-- Sección de Presentación (Fondo de color frío) -->
+        <section id="presentacion" class="mb-16 p-8 rounded-xl bg-color-section-bg shadow-lg fade-in-up" data-delay="0.5">
+            <h2 class="text-3xl font-bold border-b-2 pb-2 text-color-secondary border-color-primary">
+                Acerca de Mí
+            </h2>
+            <p class="mt-4 text-lg leading-relaxed text-gray-700">
+                Soy Licenciado en Sistemas egresado en la FaCENA (UNNE), cursé la Maestría en Alta Dirección de Empresas en la UAI y desde 2005 me he desarrollado profesionalmente como <strong>Full Stack Developer, Tech Leader y PM/Scrum Master</strong>.
+            </p>
+            <p class="mt-3 text-lg leading-relaxed text-gray-700">
+                He liderado equipos de desarrollo y gestionado proyectos utilizando metodologías ágiles, contando con certificaciones como <strong>Scrum Master, Product Owner y AWS Developer Associate</strong>. Mi misión es agregar valor en todo lo que haga poniendo a disposición todos mis conocimientos, experiencia y habilidades, guiado por mis valores de compromiso, colaboración, crecimiento y bienestar.
+            </p>
+        </section>
+
+        <!-- Sección de Experiencia Laboral -->
+        <section id="experiencia" class="mb-16">
+            <h2 class="text-3xl font-bold border-b-2 pb-2 text-color-secondary border-color-primary fade-in-up" data-delay="0.7">
+                Experiencia Profesional
+            </h2>
+            <div class="mt-6 space-y-6">
+                
+                <!-- Experiencia 1: Tech Leader en Syloper SRL -->
+                <div class="experience-card p-6 bg-white rounded-lg shadow-md fade-in-up" data-delay="0.9">
+                    <div class="flex justify-between items-center">
+                        <!-- Text Group -->
+                        <div class="flex-grow">
+                            <h3 class="text-xl font-semibold text-color-secondary">Tech Leader (remoto)</h3>
+                            <p class="text-lg font-medium text-gray-600">Syloper SRL (Rosario, Santa Fe, Argentina)</p>
+                            <span class="text-sm font-medium text-color-primary mt-1 block">2023 - Actualidad (2a 8m)</span>
+                        </div>
+                        <!-- Logo Link -->
+                        <a href="https://www.syloper.com/" target="_blank" class="flex-shrink-0 ml-4 interactive-link logo-link" title="Ir a web de Syloper">
+                            <!--  -->
+                            <img src="https://polotecnologico.net/wp-content/uploads/2012/01/Syloper-Logo-cuadrado-01.jpg" alt="Logo de Syloper SRL" class="w-12 h-12 rounded-full border-2 border-color-primary">
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Experiencia 2: Project Manager en Nubity SRL -->
+                <div class="experience-card p-6 bg-white rounded-lg shadow-md fade-in-up" data-delay="1.1">
+                    <div class="flex justify-between items-center">
+                        <!-- Text Group -->
+                        <div class="flex-grow">
+                            <h3 class="text-xl font-semibold text-color-secondary">Project Manager</h3>
+                            <p class="text-lg font-medium text-gray-600">Nubity SRL (CABA, Capital Federal, Argentina)</p>
+                            <span class="text-sm font-medium text-color-primary mt-1 block">2021 - 2023 (1a 11m)</span>
+                        </div>
+                        <!-- Logo Link -->
+                        <a href="https://www.nubity.com/" target="_blank" class="flex-shrink-0 ml-4 interactive-link logo-link" title="Ir a web de Nubity">
+                            <!--  -->
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzeB2xgnzGXdZ7kagHPMt9NcLSplBNvlfooQ&s" alt="Logo de Nubity SRL" class="w-12 h-12 rounded-full border-2 border-color-primary">
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Experiencia 3: Desarrollador FullStack Sr. en Argenprop -->
+                <div class="experience-card p-6 bg-white rounded-lg shadow-md fade-in-up" data-delay="1.3">
+                    <div class="flex justify-between items-center">
+                        <!-- Text Group -->
+                        <div class="flex-grow">
+                            <h3 class="text-xl font-semibold text-color-secondary">Desarrollador FullStack Sr.</h3>
+                            <p class="text-lg font-medium text-gray-600">Agea (CABA, Capital Federal, Argentina)</p>
+                            <span class="text-sm font-medium text-color-primary mt-1 block">2019 - 2021 (1a 9m)</span>
+                        </div>
+                        <!-- Logo Link -->
+                        <a href="https://www.argenprop.com/" target="_blank" class="flex-shrink-0 ml-4 interactive-link logo-link" title="Ir a web de Argenprop">
+                            <!--  -->
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWcOXyHLfdRstuYWPvvOTtKt8BGezxLlDZyw&s" alt="Logo de Argenprop" class="w-12 h-12 rounded-full border-2 border-color-primary">
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Experiencia 4: Jefe de Desarrollo en Maxtracker S.A. -->
+                <div class="experience-card p-6 bg-white rounded-lg shadow-md fade-in-up" data-delay="1.5">
+                    <div class="flex justify-between items-center">
+                        <!-- Text Group -->
+                        <div class="flex-grow">
+                            <h3 class="text-xl font-semibold text-color-secondary">Jefe de Desarrollo</h3>
+                            <p class="text-lg font-medium text-gray-600">Maxtracker S.A. (CABA, Capital Federal, Argentina)</p>
+                            <span class="text-sm font-medium text-color-primary mt-1 block">2015 - 2019 (4 años)</span>
+                        </div>
+                        <!-- Logo Link -->
+                        <a href="https://www.maxtracker.com.ar/" target="_blank" class="flex-shrink-0 ml-4 interactive-link logo-link" title="Ir a web de Maxtracker">
+                            <!--  -->
+                            <img src="https://d1hbpr09pwz0sk.cloudfront.net/logo_url/maxtracker-sa-35f2fcaa" alt="Logo de Maxtracker S.A." class="w-12 h-12 rounded-full border-2 border-color-primary">
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- ... Otras experiencias pueden ser colapsadas o mostradas de manera más compacta ... -->
+                <details class="group cursor-pointer">
+                    <summary class="flex items-center justify-between p-4 bg-blue-100 rounded-lg font-medium text-color-secondary interactive-link border border-blue-200">
+                        Otras Experiencias Previas (2005 - 2015)
+                        <i data-lucide="chevron-down" class="w-5 h-5 transition-transform group-open:rotate-180"></i>
+                    </summary>
+                    <div class="pl-6 pt-4 space-y-4 border-l-2 border-color-secondary ml-2 bg-blue-50 p-4 rounded-b-lg">
+                        <div class="text-sm">
+                            <p class="font-semibold">Coordinador de Desarrollo y Desarrollador PHP Sr. (2014-2015)</p>
+                            <p class="text-gray-500">Emprendimientos Satelitales S.A.</p>
+                        </div>
+                        <div class="text-sm">
+                            <p class="font-semibold">Líder Técnico & Solution Developer Sr. (2010-2014)</p>
+                            <p class="text-gray-500">Intraway Corporation S.R.L.</p>
+                        </div>
+                        <div class="text-sm">
+                            <p class="font-semibold">Desarrollador PHP Freelance (2005-2010)</p>
+                            <p class="text-gray-500">Giant Eye Media, Berger Innovaciones, Pandemia Digital, 3trex Tech Solutions, InterNEA.</p>
+                        </div>
+                    </div>
+                </details>
+            </div>
+        </section>
+
+        <!-- Sección de Habilidades / Skills (Fondo de color frío) -->
+        <section id="habilidades" class="mb-16 p-8 rounded-xl bg-color-section-bg shadow-lg">
+            <h2 class="text-3xl font-bold border-b-2 pb-2 text-color-secondary border-color-primary fade-in-up" data-delay="1.7">
+                Habilidades Técnicas
+            </h2>
+            <div class="mt-6 flex flex-wrap gap-3">
+                
+                <!-- Lenguajes -->
+                <div class="w-full md:w-[48%] lg:w-[31%] p-4 bg-white rounded-xl shadow-md fade-in-up" data-delay="1.9">
+                    <h3 class="text-xl font-semibold mb-3 flex items-center text-color-header"><i data-lucide="code" class="w-5 h-5 mr-2 text-color-primary"></i> Lenguajes</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <!-- Etiquetas de color primario -->
+                        <span class="skill-badge bg-color-primary text-gray-800 px-3 py-1 text-sm font-medium rounded-full cursor-pointer">PHP</span>
+                        <span class="skill-badge bg-color-primary text-gray-800 px-3 py-1 text-sm font-medium rounded-full cursor-pointer">JAVA</span>
+                        <!-- Etiquetas de color secundario (Azul claro) -->
+                        <span class="skill-badge bg-blue-200 text-gray-700 px-3 py-1 text-sm font-medium rounded-full cursor-pointer">C/C++</span>
+                        <span class="skill-badge bg-blue-200 text-gray-700 px-3 py-1 text-sm font-medium rounded-full cursor-pointer">JavaScript</span>
+                        <span class="skill-badge bg-blue-200 text-gray-700 px-3 py-1 text-sm font-medium rounded-full cursor-pointer">Shell Scripting</span>
+                    </div>
+                </div>
+
+                <!-- Web y Frontend -->
+                <div class="w-full md:w-[48%] lg:w-[31%] p-4 bg-white rounded-xl shadow-md fade-in-up" data-delay="2.1">
+                    <h3 class="text-xl font-semibold mb-3 flex items-center text-color-header"><i data-lucide="layout-grid" class="w-5 h-5 mr-2 text-color-primary"></i> Web/Frameworks</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-badge bg-color-primary text-gray-800 px-3 py-1 text-sm font-medium rounded-full cursor-pointer">Laravel</span>
+                        <span class="skill-badge bg-blue-200 text-gray-700 px-3 py-1 text-sm font-medium rounded-full cursor-pointer">VueJS</span>
+                        <span class="skill-badge bg-blue-200 text-gray-700 px-3 py-1 text-sm font-medium rounded-full cursor-pointer">CakePHP/CI/Kohana</span>
+                        <span class="skill-badge bg-blue-200 text-gray-700 px-3 py-1 text-sm font-medium rounded-full cursor-pointer">jQuery, AJAX</span>
+                        <span class="skill-badge bg-blue-200 text-gray-700 px-3 py-1 text-sm font-medium rounded-full cursor-pointer">HTML/CSS/Bootstrap</span>
+                        <span class="skill-badge bg-blue-200 text-gray-700 px-3 py-1 text-sm font-medium rounded-full cursor-pointer">SOAP/REST</span>
+                    </div>
+                </div>
+                
+                <!-- Bases de Datos y Cloud -->
+                <div class="w-full md:w-[48%] lg:w-[31%] p-4 bg-white rounded-xl shadow-md fade-in-up" data-delay="2.3">
+                    <h3 class="text-xl font-semibold mb-3 flex items-center text-color-header"><i data-lucide="database" class="w-5 h-5 mr-2 text-color-primary"></i> DB & Cloud</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-badge bg-color-primary text-gray-800 px-3 py-1 text-sm font-medium rounded-full cursor-pointer">MySQL/PostgreSQL</span>
+                        <span class="skill-badge bg-blue-200 text-gray-700 px-3 py-1 text-sm font-medium rounded-full cursor-pointer">Oracle DB, SQLite</span>
+                        <span class="skill-badge bg-blue-200 text-gray-700 px-3 py-1 text-sm font-medium rounded-full cursor-pointer">MongoDB/DynamoDB</span>
+                        <span class="skill-badge bg-color-primary text-gray-800 px-3 py-1 text-sm font-medium rounded-full cursor-pointer">AWS Developer Associate</span>
+                        <span class="skill-badge bg-blue-200 text-gray-700 px-3 py-1 text-sm font-medium rounded-full cursor-pointer">Docker, Linux</span>
+                    </div>
+                </div>
+
+                <!-- Metodologías y Herramientas -->
+                <div class="w-full md:w-[48%] lg:w-full p-4 bg-white rounded-xl shadow-md fade-in-up mt-4" data-delay="2.5">
+                    <h3 class="text-xl font-semibold mb-3 flex items-center text-color-header"><i data-lucide="cpu" class="w-5 h-5 mr-2 text-color-primary"></i> Metodologías & Otros</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-badge bg-color-primary text-gray-800 px-3 py-1 text-sm font-medium rounded-full cursor-pointer">Scrum Master/PO (Scrum Inc.)</span>
+                        <span class="skill-badge bg-blue-200 text-gray-700 px-3 py-1 text-sm font-medium rounded-full cursor-pointer">Metodologías Ágiles</span>
+                        <span class="skill-badge bg-blue-200 text-gray-700 px-3 py-1 text-sm font-medium rounded-full cursor-pointer">Git/SVN</span>
+                        <span class="skill-badge bg-blue-200 text-gray-700 px-3 py-1 text-sm font-medium rounded-full cursor-pointer">UML, Patrones de Diseño</span>
+                        <span class="skill-badge bg-blue-200 text-gray-700 px-3 py-1 text-sm font-medium rounded-full cursor-pointer">PHP Unit</span>
+                        <span class="skill-badge bg-blue-200 text-gray-700 px-3 py-1 text-sm font-medium rounded-full cursor-pointer">Procesamiento de Imágenes (OpenCV)</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de Formación y Certificaciones -->
+        <section id="formacion" class="mb-16">
+            <h2 class="text-3xl font-bold border-b-2 pb-2 text-color-secondary border-color-primary fade-in-up" data-delay="2.7">
+                Formación y Certificaciones
+            </h2>
+            <div class="mt-6 space-y-4">
+                
+                <!-- Certificaciones (Fondo de color frío) -->
+                <div class="p-6 bg-blue-50 rounded-lg shadow-md fade-in-up interactive-link border border-blue-200" data-delay="2.9">
+                    <h3 class="text-xl font-semibold text-color-secondary flex items-center">
+                        <i data-lucide="badge-check" class="w-6 h-6 mr-2 text-color-primary"></i> Certificaciones
+                    </h3>
+                    <ul class="list-disc pl-5 mt-2 space-y-1 text-gray-600">
+                        <li>AWS Certified Developer Associate (Agosto 2022) - <a href="https://www.credly.com/badges/3ed3e17a-3b5f-47b3-b6b9-d1a514fb072b/linked_in?t=rg2a7x" target="_blank" class="text-blue-600 hover:underline">Ver Certificado</a></li>
+                        <li>Registered Scrum Master (Septiembre 2020)</li>
+                        <li>Registered Product Owner (Septiembre 2020)</li>
+                    </ul>
+                </div>
+                
+                <!-- Formación Académica (Fondo de color frío) -->
+                <div class="p-6 bg-blue-50 rounded-lg shadow-md fade-in-up border border-blue-200" data-delay="3.1">
+                    <h3 class="text-xl font-semibold text-color-secondary flex items-center">
+                        <i data-lucide="graduation-cap" class="w-6 h-6 mr-2 text-color-primary"></i> Estudios
+                    </h3>
+                    <ul class="list-disc pl-5 mt-2 space-y-1 text-gray-600">
+                        <li>Licenciado en Sistemas - Universidad Nacional del Nordeste (UNNE), 2008.</li>
+                        <li>Maestrando en Alta Dirección de Empresas - Universidad Abierta Interamericana (UAI) [INCOMPLETO].</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de Publicaciones y Cursos Dictados (Compacto) -->
+        <section id="otros" class="mb-16">
+             <h2 class="text-3xl font-bold border-b-2 pb-2 text-color-secondary border-color-primary fade-in-up" data-delay="3.3">
+                Cursos & Publicaciones
+            </h2>
+            <details class="group cursor-pointer mt-6">
+                <summary class="flex items-center justify-between p-4 bg-blue-100 rounded-lg font-medium text-color-secondary interactive-link border border-blue-200">
+                    Ver Publicaciones, Disertaciones y Cursos Dictados
+                    <i data-lucide="chevron-down" class="w-5 h-5 transition-transform group-open:rotate-180"></i>
+                </summary>
+                <div class="pl-6 pt-4 space-y-4 bg-blue-50 p-4 rounded-b-lg">
+                    <h3 class="text-xl font-semibold text-color-secondary border-b border-blue-300 pb-1">Cursos Dictados</h3>
+                    <ul class="list-disc pl-5 text-gray-700 space-y-2 text-sm">
+                        <li>Capacitación "Sistema Operativo GNU/Linux" (25hs reloj) - UNNE (Sep-Oct 2005).</li>
+                        <li>Capacitación "GNU/Linux: Operación y Administración básica" - UNNE (Feb 2006).</li>
+                        <li>Curso "Operación Básica de Sistema GNU/Linux" (40hs reloj) - UTN Regional Resistencia (Sep 2006).</li>
+                    </ul>
+                    <h3 class="text-xl font-semibold text-color-secondary border-b border-blue-300 pb-1 pt-4">Papers y Disertaciones</h3>
+                    <ul class="list-disc pl-5 text-gray-700 space-y-2 text-sm">
+                        <li>Autor del trabajo "Recurso para la gestión bibliográfica en una plataforma educativa de software libre" (Anales 37º JAIIO, 2008).</li>
+                        <li>Disertante de la exposición "Desarrollo de una biblioteca virtual para Moodle" (FaCENA 2008).</li>
+                        <li>Expositor del artículo "Gestión Estandarizada de Material Bibliográfico en una Plataforma E-learning" (CACIC 2007).</li>
+                        <li>Co-Autor: "Aplicación de minería de datos con una herramienta de software libre en la evaluación del rendimiento académico..." (VII Workshop, 2006).</li>
+                        <li>*...y más artículos sobre plataformas educativas y gestión bibliográfica (2007-2008)*.</li>
+                    </ul>
+                </div>
+            </details>
+        </section>
+        
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-color-secondary py-8 mt-12">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-gray-400 text-sm">
+            <p>&copy; 2025 Roberto Alejandro Bargiela. Creado con un estilo techie y moderno.</p>
+            <p class="mt-2">Contacto: <a href="mailto:roberto.bargiela@gmail.com" class="text-color-primary hover:text-white">roberto.bargiela@gmail.com</a></p>
+        </div>
+    </footer>
+
+    <!-- Script para los efectos de carga (Scroll Reveal / Fade In) -->
+    <script>
+        // Inicializa los íconos de Lucide
+        lucide.createIcons();
+
+        // Función para aplicar la animación de fade-in al cargar o al hacer scroll
+        function handleScrollAnimation() {
+            const elements = document.querySelectorAll('.fade-in-up');
+            elements.forEach(el => {
+                // Posición de la parte superior del elemento
+                const elementTop = el.getBoundingClientRect().top;
+                // Altura del viewport (ventana)
+                const viewportHeight = window.innerHeight;
+                
+                // Si el elemento está visible o casi visible (20% en la parte inferior de la pantalla)
+                if (elementTop < viewportHeight * 0.90) {
+                    // Obtiene el retraso y aplica la clase de visible
+                    const delay = parseFloat(el.getAttribute('data-delay')) || 0;
+                    setTimeout(() => {
+                        el.classList.add('fade-in-visible');
+                    }, delay * 1000);
+                    // Una vez visible, removemos el event listener para no re-ejecutarlo, 
+                    // aunque en este caso lo mantenemos simple.
+                }
+            });
+        }
+
+        // Ejecutar al cargar la página y al hacer scroll
+        window.addEventListener('load', handleScrollAnimation);
+        window.addEventListener('scroll', handleScrollAnimation);
+        
+        // Ejecutar inmediatamente al cargar el DOM para elementos ya visibles
+        document.addEventListener('DOMContentLoaded', handleScrollAnimation);
+        
+        // Efecto visual al hacer click en las tarjetas de experiencia y habilidades
+        document.querySelectorAll('.experience-card, .skill-badge').forEach(item => {
+            item.addEventListener('mousedown', function(e) {
+                this.classList.add('ring-2', 'ring-color-primary', 'ring-opacity-50');
+            });
+            item.addEventListener('mouseup', function(e) {
+                this.classList.remove('ring-2', 'ring-color-primary', 'ring-opacity-50');
+            });
+            item.addEventListener('mouseleave', function(e) {
+                // Asegura que se quite el ring si el mouse sale mientras está presionado (solo para mousedown)
+                this.classList.remove('ring-2', 'ring-color-primary', 'ring-opacity-50');
+            });
+        });
+
+    </script>
+</body>
+</html>
